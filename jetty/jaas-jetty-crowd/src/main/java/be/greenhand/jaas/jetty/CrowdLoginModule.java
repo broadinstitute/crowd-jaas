@@ -97,7 +97,6 @@ public class CrowdLoginModule implements LoginModule {
 	/**
 	 * @see javax.security.auth.spi.LoginModule#initialize(javax.security.auth.Subject, javax.security.auth.callback.CallbackHandler, java.util.Map, java.util.Map)
 	 */
-	@Override
 	public void initialize(Subject subject, CallbackHandler callbackHandler, Map<String, ?> sharedState, Map<String, ?> options) {
 		this.subject = subject;
 		this.callbackHandler = callbackHandler;
@@ -113,7 +112,6 @@ public class CrowdLoginModule implements LoginModule {
 	/**
 	 * @see javax.security.auth.spi.LoginModule#login()
 	 */
-	@Override
 	public boolean login() throws LoginException {
 		try {
 			if (callbackHandler == null) {
@@ -143,7 +141,6 @@ public class CrowdLoginModule implements LoginModule {
 	/**
 	 * @see javax.security.auth.spi.LoginModule#commit()
 	 */
-	@Override
 	public boolean commit() throws LoginException {
 		if (!authenticated) {
 			resetStateData();
@@ -177,7 +174,6 @@ public class CrowdLoginModule implements LoginModule {
 	/**
 	 * @see javax.security.auth.spi.LoginModule#abort()
 	 */
-	@Override
 	public boolean abort() throws LoginException {
 		if (LOG.isDebugEnabled()) {
 			LOG.debug(String.format("abort called - previous login state: [%b]", authenticated));
@@ -200,7 +196,6 @@ public class CrowdLoginModule implements LoginModule {
 	/**
 	 * @see javax.security.auth.spi.LoginModule#logout()
 	 */
-	@Override
 	public boolean logout() throws LoginException {
 		// remove JAASRole from subject
 		subject.getPrincipals().remove(userPrincipal);

@@ -34,7 +34,6 @@
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-jaas</artifactId>
 			<version>9.2.22.v20170606</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
