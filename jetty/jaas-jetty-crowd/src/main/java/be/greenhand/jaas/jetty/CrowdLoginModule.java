@@ -37,9 +37,9 @@ import javax.security.auth.login.LoginException;
 import javax.security.auth.spi.LoginModule;
 import javax.ws.rs.core.MediaType;
 
-import org.eclipse.jetty.plus.jaas.JAASPrincipal;
-import org.eclipse.jetty.plus.jaas.JAASRole;
-import org.eclipse.jetty.plus.jaas.callback.ObjectCallback;
+import org.eclipse.jetty.jaas.JAASPrincipal;
+import org.eclipse.jetty.jaas.JAASRole;
+import org.eclipse.jetty.jaas.callback.ObjectCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
